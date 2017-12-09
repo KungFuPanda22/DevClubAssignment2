@@ -1,0 +1,19 @@
+		body{
+			background-image:url(back.png);
+			background-size:contain;
+			background-repeat:repeat;
+		}
+		#todobox{
+			margin-top:100px;
+			width:30%;
+			margin-right:500px;
+			margin-left:500px;
+			border: 2px solid black;
+		}
+		#todoheading{
+			font-size:27px;
+			font-family:"Courier New", Courier, monospace;
+			background-color:#FABF85;
+		}
+		#inputarea{
+		}
