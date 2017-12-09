@@ -1,0 +1,53 @@
+<html>
+	<head>
+    	<style>
+		body{
+			background-image:url(back.png);
+			background-size:contain;
+			background-repeat:repeat;
+		}
+		#todobox{
+			margin-top:100px;
+			width:30%;
+			margin-right:500px;
+			margin-left:500px;
+			border: 2px solid black;
+		}
+		#todoheading{
+			font-size:27px;
+			font-family:"Courier New", Courier, monospace;
+			background-color:#FABF85;
+		}
+		#inputarea{
+		}
+		</style>
+    </head>
+    <body>
+    <script language="javascript" type="text/javascript">
+		function todoList(){
+			var value=document.getElementById("addTodo").value;
+			var text=document.createTextNode(value);
+			var newvalue=document.createElement("div");
+			newvalue.style.fontSize="20px";
+			newvalue.style.backgroundColor="#D3D3D3";
+			newvalue.appendChild(text);
+			newvalue.onclick=function(){newvalue.style.setProperty("text-decoration", "line-through");}
+			document.getElementById("inputarea").appendChild(newvalue);
+		}
+	</script>
+    <div id="todobox">
+    <div id="todoheading">
+ 	&nbsp;<b>Your todos</b>
+    </div>
+    <div id="inputarea">
+    <form id="todoForm" style="margin-bottom:0px;">
+    <input id="addTodo" placeholder=" Add a new todo" size="23%" style="font-size:20px;">
+    <button type="button" onClick="todoList()" style="font-size:20px;">Add TODO
+    </button>
+    </form>
+    </div>
+    <div id="newtodo" onClick="">
+    </div>
+    </div>
+    </body>
+</html>
